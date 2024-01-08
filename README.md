@@ -9,6 +9,10 @@ Repository contains code for development of Gage's figma design of his portfolio
 ## Resources
 * [Figma Design](https://www.figma.com/file/sMXBiXlkYKNPdDGZulBCYB/gage-school-project?fuid=1325229990889657845&source=email_invite)
 
+* [Hosted on Netlify](https://gage.netlify.app/)
+
+## How to Run the Project
+
 In the project directory, you can run:
 
 ### `yarn start`
@@ -16,7 +20,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.\ 
 You will also see any lint errors in the console.
 
 ### `yarn build`

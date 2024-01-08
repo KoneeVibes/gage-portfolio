@@ -1,0 +1,11 @@
+@media screen and (min-width: 0px) {
+    html {
+        box-sizing: border-box;
+        margin: 0;
+        height: 100%;
+        --pagePadding: 7.5rem;
+        --sectionMargin: 2.5rem;
+        --flexGap: 2.5rem;
+        --card-padding: 2rem;
+    }
+}
