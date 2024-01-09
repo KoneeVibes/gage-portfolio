@@ -3,7 +3,11 @@ import { Navbar } from "../../components/navigation"
 
 export const Home: React.FC<{}> = () => {
     return (
-        <Container>
+        <Container
+            sx={{
+                padding: "var(--cardPadding) var(--pagePadding)"
+            }}
+        >
             <Navbar />
         </Container>
     )

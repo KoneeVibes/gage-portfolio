@@ -3,9 +3,14 @@
         box-sizing: border-box;
         margin: 0;
         height: 100%;
+        background-color: #F8EEEE;
         --pagePadding: 7.5rem;
         --sectionMargin: 2.5rem;
         --flexGap: 2.5rem;
-        --card-padding: 2rem;
+        --cardPadding: 2rem;
+    }
+
+    *{
+        /* outline: 1px red solid; */
     }
 }
