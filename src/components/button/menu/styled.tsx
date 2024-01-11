@@ -25,10 +25,10 @@ export const Hamburger = styled(Box)(
                 transform: openMenu ? "translateY(-8px) rotate(-45deg)" : "unset",
             },
             [theme.breakpoints.down(150)]: {
-                position: "fixed",
+                position: "absolute",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                top: "calc(1.7 * var(--cardPadding))"
+                top: "calc(1.5 * var(--cardPadding))"
             },
             [theme.breakpoints.up("tablet")]: {
                 display: "none"

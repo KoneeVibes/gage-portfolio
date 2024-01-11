@@ -24,7 +24,7 @@ export const Nav: React.FC<{ children: React.ReactNode }> = styled("div")(
                 [theme.breakpoints.down("tablet")]: {
                     display: openMenu ? "flex" : "none",
                     position: "fixed",
-                    top: theme.spacing(15),
+                    top: "calc(46px + var(--cardPadding))",
                     left: openMenu ? "0" : "-100%",
                     flexDirection: "column",
                     gap: theme.spacing(10),
@@ -32,7 +32,13 @@ export const Nav: React.FC<{ children: React.ReactNode }> = styled("div")(
                     height: "100%",
                     textAlign: "center",
                     transition: 0.3,
+                    background: "#F8EEEE",
+                    zIndex: 10,
+                    padding: "var(--sectionMargin) 0"
                 },
+                [theme.breakpoints.down(150)]: {
+                    top: "calc(25px + var(--cardPadding))",
+                }
             },
             "& a": {
                 fontFamily: "Poppins",

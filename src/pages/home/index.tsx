@@ -1,6 +1,7 @@
-import { Container } from "@mui/material"
-import { Navbar } from "../../components/navigation"
-import { Header } from "../../components/header"
+import { Container } from "@mui/material";
+import { Navbar } from "../../components/navigation";
+import { Header } from "../../components/header";
+import { About } from "../../components/about";
 
 export const Home: React.FC<{}> = () => {
     return (
@@ -11,6 +12,7 @@ export const Home: React.FC<{}> = () => {
         >
             <Navbar />
             <Header />
+            <About />
         </Container>
     )
 }
