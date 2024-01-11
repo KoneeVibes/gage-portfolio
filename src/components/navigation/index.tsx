@@ -3,11 +3,12 @@ import { HashLink } from 'react-router-hash-link';
 import { Logo } from "../../assets";
 import { Nav } from "./styled";
 import { BaseButton } from "../button";
+import { Menu } from "../button/menu";
 
 export const Navbar: React.FC<{}> = () => {
     return (
         <Nav>
-            <Logo />
+            <Logo className="logo" />
             <ul>
                 {navlinks.map((navlink, k) => {
                     return (
@@ -24,6 +25,8 @@ export const Navbar: React.FC<{}> = () => {
             </ul>
             <BaseButton
                 variant="contained"
+                className="actionButton"
+                disableElevation={true}
                 sx={{
                     borderRadius: "31px",
                     fontSize: "20px",
@@ -31,6 +34,7 @@ export const Navbar: React.FC<{}> = () => {
             >
                 Let's talk
             </BaseButton>
+            <Menu />
         </Nav >
     )
 }

@@ -1,5 +1,6 @@
 import { Container } from "@mui/material"
 import { Navbar } from "../../components/navigation"
+import { Header } from "../../components/header"
 
 export const Home: React.FC<{}> = () => {
     return (
@@ -9,6 +10,7 @@ export const Home: React.FC<{}> = () => {
             }}
         >
             <Navbar />
+            <Header />
         </Container>
     )
 }

@@ -6,6 +6,9 @@ export const BaseButton = styled(Button)(
         fontWeight: 500,
         lineHeight: 1.2,
         padding: `${theme.spacing(2)} ${theme.spacing(4)}`,
+        [theme.breakpoints.down("laptop")]: {
+            fontSize: "16px"
+        },
         background: (() => {
             switch (variant) {
                 case 'text':

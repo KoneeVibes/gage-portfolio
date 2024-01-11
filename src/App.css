@@ -4,13 +4,30 @@
         margin: 0;
         height: 100%;
         background-color: #F8EEEE;
-        --pagePadding: 7.5rem;
+        --pagePadding: 1rem;
         --sectionMargin: 2.5rem;
         --flexGap: 2.5rem;
         --cardPadding: 2rem;
     }
-
-    *{
+    * {
         /* outline: 1px red solid; */
+    }
+}
+
+@media screen and (min-width: 425px) {
+    html {
+        --pagePadding: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        --pagePadding: 3rem
+    }
+}
+
+@media screen and (min-width: 1512px) {
+    html {
+        --pagePadding: 7.5rem
     }
 }
