@@ -3,6 +3,7 @@ import { Headshot } from "../../assets"
 import { BaseButton } from "../button"
 import { Review } from "../review"
 import { Hero } from "./styled"
+import { theme } from "../../theme"
 
 export const Header: React.FC<{}> = () => {
     return (
@@ -47,6 +48,11 @@ export const Header: React.FC<{}> = () => {
                     padding={"var(--cardPadding) 0"}
                     overflow={"hidden"}
                     width={{ mobile: "max-content", miniTablet: "auto" }}
+                    sx={{
+                        [theme.breakpoints.down(230)]: {
+                            width: "100%"
+                        }
+                    }}
                 >
                     <BaseButton
                         disableElevation
@@ -56,7 +62,9 @@ export const Header: React.FC<{}> = () => {
                             width: { mobile: "100%", miniTablet: "auto" },
                         }}
                     >
-                        GET IN TOUCH
+                        <Typography variant={"button"}>
+                            GET IN TOUCH
+                        </Typography>
                     </BaseButton>
                     <BaseButton
                         variant="outlined"
@@ -70,7 +78,9 @@ export const Header: React.FC<{}> = () => {
                             }
                         }}
                     >
-                        VIEW ALL WORKS
+                        <Typography variant={"button"}>
+                            VIEW ALL WORKS
+                        </Typography>
                     </BaseButton>
                 </Stack>
                 <Review />

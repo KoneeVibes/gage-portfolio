@@ -6,6 +6,7 @@ import { BaseButton } from "../button";
 import { Menu } from "../button/menu";
 import { useEffect, useContext } from "react";
 import { Context } from "../../context";
+import { Typography } from "@mui/material";
 
 export const Navbar: React.FC<{}> = () => {
     const { openMenu } = useContext(Context)
@@ -43,7 +44,9 @@ export const Navbar: React.FC<{}> = () => {
                     zIndex: 10,
                 }}
             >
-                Let's talk
+                <Typography variant={"button"}>
+                    Let's talk
+                </Typography>
             </BaseButton>
             <Menu />
         </Nav >

@@ -58,4 +58,20 @@ export const theme = createTheme({
             textOverflow: "ellipsis",
         }
     },
+
+    components: {
+        MuiCardHeader: {
+            styleOverrides: {
+                root: {
+                    "& .MuiCardHeader-content": {
+                        width: "100%",
+                    },
+
+                    "& .MuiCardHeader-avatar": {
+                        flexShrink: 1,
+                    }
+                },
+            }
+        }
+    }
 })

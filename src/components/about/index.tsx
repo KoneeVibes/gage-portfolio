@@ -28,9 +28,10 @@ export const About: React.FC<{}> = () => {
                 }}
             >
                 <CardHeader
-                    avatar={<AboutIcon />}
+                    avatar={<AboutIcon style={{ width: "100%" }} />}
                     title={
                         <Typography
+                            variant="h2"
                             fontFamily={"Montserrat"}
                             fontWeight={700}
                             lineHeight={1.4}
@@ -42,6 +43,7 @@ export const About: React.FC<{}> = () => {
                 />
                 <CardContent>
                     <Typography
+                        variant="body1"
                         whiteSpace={"normal"}
                         fontFamily={"Montserrat"}
                         fontWeight={400}
@@ -52,6 +54,7 @@ export const About: React.FC<{}> = () => {
                     </Typography>
                     <br />
                     <Typography
+                        variant="body1"
                         whiteSpace={"normal"}
                         fontFamily={"Montserrat"}
                         fontWeight={400}
