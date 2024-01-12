@@ -3,6 +3,8 @@ import { Navbar } from "../../components/navigation";
 import { Header } from "../../components/header";
 import { About } from "../../components/about";
 import { Projects } from "../../components/projects";
+import { Picture } from "../../components/picturebox";
+import { Footer } from "../../components/footer";
 
 export const Home: React.FC<{}> = () => {
     return (
@@ -15,6 +17,8 @@ export const Home: React.FC<{}> = () => {
             <Header />
             <About />
             <Projects />
+            <Picture />
+            <Footer />
         </Container>
     )
 }

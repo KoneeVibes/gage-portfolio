@@ -1,4 +1,4 @@
-import { AcademicAwards, CommunityService, GameDevelopment, Nanshan, ScratchAndPythonClasses, SquashClub, StudentCouncil } from "../assets"
+import { AcademicAwards, CommunityService, FacebookIcon, GameDevelopment, InstagramIcon, LinkedInIcon, Nanshan, ScratchAndPythonClasses, SquashClub, StudentCouncil, TwitterIcon, YTIcon } from "../assets"
 
 export const navlinks = [
     {
@@ -58,4 +58,8 @@ export const projects = [
         media: <CommunityService />,
         actionUrl: "#"
     },
+]
+
+export const SMIcons = [
+    <FacebookIcon />, <LinkedInIcon />, <TwitterIcon />, <YTIcon />, <InstagramIcon />
 ]

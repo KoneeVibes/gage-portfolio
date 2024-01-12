@@ -11,3 +11,8 @@ export { ReactComponent as AcademicAwards } from "./academic.svg";
 export { ReactComponent as StudentCouncil } from "./studentcouncil.svg";
 export { ReactComponent as CommunityService } from "./communityservice.svg";
 export { ReactComponent as GagePhoto } from "./gagePhoto.svg";
+export { ReactComponent as FacebookIcon } from "./facebookIcon.svg";
+export { ReactComponent as LinkedInIcon } from "./linkedinIcon.svg";
+export { ReactComponent as TwitterIcon } from "./twitterIcon.svg";
+export { ReactComponent as YTIcon } from "./youtubeIcon.svg";
+export { ReactComponent as InstagramIcon } from "./instagramIcon.svg";
