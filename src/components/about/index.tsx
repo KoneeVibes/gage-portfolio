@@ -5,7 +5,7 @@ import header from "../../assets/headerPhoto.svg";
 
 export const About: React.FC<{}> = () => {
     return (
-        <AboutStack>
+        <AboutStack id="about">
             <Box
                 sx={{
                     flex: "1 1 50%",

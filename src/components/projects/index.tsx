@@ -1,11 +1,14 @@
-import { Stack, Typography } from "@mui/material"
-import { ProjectsContainer } from "./styled"
-import { projects } from "../../config"
-import { Project } from "./project"
+import { Stack, Typography } from "@mui/material";
+import { ProjectsContainer } from "./styled";
+import { projects } from "../../config";
+import { Project } from "./project";
 
-export const Projects: React.FC<{}> = () => {
+export const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }> = ({ projectsRef }) => {
     return (
-        <ProjectsContainer>
+        <ProjectsContainer
+            id="projects"
+            ref={projectsRef}
+        >
             <Typography
                 variant="h2"
                 whiteSpace={"normal"}

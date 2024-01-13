@@ -4,9 +4,13 @@ import { SMIcons } from "../../config";
 import { FooterBox } from "./styled";
 import logo from "../../assets/logo.svg";
 
-export const Footer: React.FC<{}> = () => {
+export const Footer: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement | null> }> = ({ footerRef }) => {
     return (
-        <FooterBox>
+        <FooterBox
+            id="footer"
+            ref={footerRef}
+            component={"div"}
+        >
             <img src={logo} alt="logo" />
             <Box
                 padding={"var(--cardPadding) 0"}

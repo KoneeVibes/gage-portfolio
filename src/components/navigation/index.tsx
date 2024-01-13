@@ -8,8 +8,8 @@ import { useEffect, useContext } from "react";
 import { Context } from "../../context";
 import { Typography } from "@mui/material";
 
-export const Navbar: React.FC<{}> = () => {
-    const { openMenu } = useContext(Context)
+export const Navbar: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement | null> }> = ({ footerRef }) => {
+    const { openMenu, setOpenMenu } = useContext(Context)
     useEffect(() => {
         if (openMenu) {
             document.body.style.overflow = "hidden"
@@ -27,6 +27,7 @@ export const Navbar: React.FC<{}> = () => {
                             <HashLink
                                 to={navlink.link}
                                 smooth={true}
+                                onClick={() => setOpenMenu(false)}
                             >
                                 {navlink.name}
                             </HashLink>
@@ -43,6 +44,7 @@ export const Navbar: React.FC<{}> = () => {
                     fontSize: "20px",
                     zIndex: 10,
                 }}
+                onClick={() => footerRef?.current?.scrollIntoView({ behavior: "smooth" })}
             >
                 <Typography variant={"button"}>
                     Let's talk

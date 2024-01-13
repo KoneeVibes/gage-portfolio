@@ -1,9 +1,11 @@
-import { Card, CardActions, CardHeader, Typography } from "@mui/material"
-import { ProjectType } from "../../types/app.type"
-import { ProjectBox } from "./styled"
-import { BaseButton } from "../button"
+import { Card, CardActions, CardHeader, Typography } from "@mui/material";
+import { ProjectType } from "../../types/app.type";
+import { ProjectBox } from "./styled";
+import { BaseButton } from "../button";
+import { useNavigate } from "react-router-dom";
 
 export const Project: React.FC<ProjectType> = ({ bgColor, media, title, url }) => {
+    const navigate = useNavigate();
     return (
         <ProjectBox
             sx={{
@@ -28,11 +30,14 @@ export const Project: React.FC<ProjectType> = ({ bgColor, media, title, url }) =
                             {title}
                         </Typography>
                     }
+                    sx={{ padding: { mobile: "1rem 0", laptop: "1rem" } }}
                 />
-                <CardActions>
+                <CardActions
+                    sx={{ padding: { mobile: "1rem 0", laptop: "1rem" } }}
+                >
                     <BaseButton
                         variant="outlined"
-                        onClick={() => console.log(url)}
+                        onClick={() => navigate(`/projects/${url}`)}
                         sx={{
                             border: "1px solid #FFF",
                             borderRadius: "31px",

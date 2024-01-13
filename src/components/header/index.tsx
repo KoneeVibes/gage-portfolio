@@ -5,7 +5,7 @@ import { Review } from "../review"
 import { Hero } from "./styled"
 import { theme } from "../../theme"
 
-export const Header: React.FC<{}> = () => {
+export const Header: React.FC<{ projectsRef: React.MutableRefObject<HTMLElement | null>, footerRef: React.MutableRefObject<HTMLElement | null> }> = ({ projectsRef, footerRef }) => {
     return (
         <Hero>
             <Stack
@@ -63,6 +63,7 @@ export const Header: React.FC<{}> = () => {
                             borderRadius: "31px",
                             width: { mobile: "100%", miniTablet: "auto" },
                         }}
+                        onClick={() => footerRef.current?.scrollIntoView({ behavior: "smooth" })}
                     >
                         <Typography variant={"button"}>
                             GET IN TOUCH
@@ -79,6 +80,7 @@ export const Header: React.FC<{}> = () => {
                                 border: "1px solid #000",
                             }
                         }}
+                        onClick={() => projectsRef.current?.scrollIntoView({ behavior: "smooth" })}
                     >
                         <Typography variant={"button"}>
                             VIEW ALL WORKS

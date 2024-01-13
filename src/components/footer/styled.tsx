@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 import { Box } from "@mui/system";
 
-export const FooterBox: React.FC<{ children: React.ReactNode }> = styled(Box)`
+export const FooterBox = styled(Box)`
     ${({ theme }) => ({
         padding: "var(--cardPadding) 0",
         "& img": {
