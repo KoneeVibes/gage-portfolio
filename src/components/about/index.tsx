@@ -35,13 +35,16 @@ export const About: React.FC<{}> = () => {
                             fontFamily={"Montserrat"}
                             fontWeight={700}
                             lineHeight={1.4}
-                            fontSize={{ mobile: "20px", tablet: "29px" }}
+                            fontSize={{ mobile: "20px", miniTablet: "29px" }}
                         >
                             About me
                         </Typography>
                     }
+                    sx={{ padding: { mobile: "1rem 0", tablet: "1rem" } }}
                 />
-                <CardContent>
+                <CardContent
+                    sx={{ padding: { mobile: "1rem 0", tablet: "1rem" } }}
+                >
                     <Typography
                         variant="body1"
                         whiteSpace={"normal"}

@@ -3,6 +3,7 @@ import { Box, Container, styled } from "@mui/material";
 export const ProjectsContainer = styled(Container)(
     ({ theme }) => ({
         margin: "var(--sectionMargin) 0",
+        padding: 0,
         [theme.breakpoints.up(150)]: {
             margin: "calc(1.5 * var(--sectionMargin)) 0",
         },

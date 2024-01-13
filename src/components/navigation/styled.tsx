@@ -10,6 +10,9 @@ export const Nav: React.FC<{ children: React.ReactNode }> = styled("div")(
             alignItems: "center",
             justifyContent: "space-between",
             gap: theme.spacing(12),
+            [theme.breakpoints.up("tablet")]: {
+                gap: theme.spacing(5.5)
+            },
             [theme.breakpoints.down(280)]: {
                 gap: theme.spacing(4),
             },

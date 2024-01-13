@@ -41,16 +41,18 @@ export const Header: React.FC<{}> = () => {
                     <br /> I am a 14 year old high school student from China.
                 </Typography>
                 <Stack
-                    direction={{ mobile: "column", miniTablet: "row" }}
                     spacing={2}
                     useFlexGap
                     flexWrap={"wrap"}
                     padding={"var(--cardPadding) 0"}
                     overflow={"hidden"}
-                    width={{ mobile: "max-content", miniTablet: "auto" }}
+                    width={{ mobile: "max-content", tablet: "auto" }}
                     sx={{
                         [theme.breakpoints.down(230)]: {
                             width: "100%"
+                        },
+                        [theme.breakpoints.up(440)]: {
+                            flexDirection: "row"
                         }
                     }}
                 >
