@@ -40,10 +40,10 @@ export const About: React.FC<{}> = () => {
                             About me
                         </Typography>
                     }
-                    sx={{ padding: { mobile: "1rem 0", tablet: "1rem" } }}
+                    sx={{ padding: { mobile: "1rem 0", laptop: "1rem" } }}
                 />
                 <CardContent
-                    sx={{ padding: { mobile: "1rem 0", tablet: "1rem" } }}
+                    sx={{ padding: { mobile: "1rem 0", laptop: "1rem" } }}
                 >
                     <Typography
                         variant="body1"

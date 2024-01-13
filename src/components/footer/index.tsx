@@ -31,12 +31,7 @@ export const Footer: React.FC<{}> = () => {
                     fontSize={14}
                     lineHeight={1.6}
                     textAlign={"center"}
-                    sx={{
-                        backgroundImage: "linear-gradient(98deg, #B16CEA 3.69%, #FF6964 29.62%, #FEA44C 56.88%)",
-                        backgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        color: "transparent",
-                    }}
+                    color={"#FF7660"}
                 >
                     Copyright@Gage Hakim 2024. All Rights Reserved.
                 </Typography>
