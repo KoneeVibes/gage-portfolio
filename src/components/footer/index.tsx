@@ -1,14 +1,13 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import { Logo } from "../../assets";
 import { SMIcons } from "../../config";
+import { FooterBox } from "./styled";
+import logo from "../../assets/logo.svg";
 
 export const Footer: React.FC<{}> = () => {
     return (
-        <Box
-            padding={"var(--cardPadding) 0"}
-        >
-            <Logo style={{ display: "block", marginLeft: "auto", marginRight: "auto" }} />
+        <FooterBox>
+            <img src={logo} alt="logo" />
             <Box
                 padding={"var(--cardPadding) 0"}
             >
@@ -25,11 +24,23 @@ export const Footer: React.FC<{}> = () => {
                 </Stack>
                 <hr style={{ margin: "var(--cardPadding) 0", border: "1px solid #FF7660" }} />
                 <Typography
+                    variant="subtitle1"
+                    whiteSpace={"normal"}
+                    fontFamily={"Poppins"}
+                    fontWeight={400}
+                    fontSize={14}
+                    lineHeight={1.6}
                     textAlign={"center"}
+                    sx={{
+                        backgroundImage: "linear-gradient(98deg, #B16CEA 3.69%, #FF6964 29.62%, #FEA44C 56.88%)",
+                        backgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        color: "transparent",
+                    }}
                 >
                     Copyright@Gage Hakim 2024. All Rights Reserved.
                 </Typography>
             </Box>
-        </Box>
+        </FooterBox>
     )
 }
