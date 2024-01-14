@@ -18,12 +18,16 @@ export const ProjectBox = styled(Box)(
         padding: theme.spacing(6),
         display: "flex",
         gap: "var(--flexGap)",
+        background: "#262525",
         [theme.breakpoints.down(120)]: {
             padding: "0 !important",
         },
         [theme.breakpoints.down("tablet")]: {
             flexDirection: "column",
             padding: theme.spacing(3),
+        },
+        "&:hover": {
+            background: "#FE7562"
         },
         "& .card": {
             flex: "1 1 40%",

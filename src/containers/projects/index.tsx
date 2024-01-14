@@ -35,7 +35,6 @@ export const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }
                     return (
                         <Project
                             key={k}
-                            bgColor={project.bgColor}
                             media={project.media}
                             title={project.title}
                             url={project.actionUrl}

@@ -7,6 +7,7 @@ export const Hamburger = styled(Box)(
         const { openMenu } = useContext(Context);
         return {
             border: "none",
+            background: "transparent",
             "& span": {
                 display: "block",
                 width: "25px",

@@ -4,14 +4,10 @@ import { ProjectBox } from "./styled";
 import { BaseButton } from "../../components/button";
 import { useNavigate } from "react-router-dom";
 
-export const Project: React.FC<ProjectType> = ({ bgColor, media, title, url }) => {
+export const Project: React.FC<ProjectType> = ({ media, title, url }) => {
     const navigate = useNavigate();
     return (
-        <ProjectBox
-            sx={{
-                background: bgColor
-            }}
-        >
+        <ProjectBox>
             {media}
             <Card
                 className="card"

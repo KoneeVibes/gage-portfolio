@@ -19,11 +19,15 @@ export const Navbar: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement |
             document.body.style.overflow = "visible"
         }
     }, [openMenu])
+    const handleLogoClick = () => {
+        setOpenMenu(false);
+        navigate("/");
+    }
     return (
         <Nav>
             <Logo
                 className="logo"
-                onClick={() => navigate("/")}
+                onClick={handleLogoClick}
             />
             <ul>
                 {navlinks.map((navlink, k) => {

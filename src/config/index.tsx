@@ -17,43 +17,36 @@ export const navlinks = [
 
 export const projects = [
     {
-        bgColor: "#262525",
         title: "Game Development",
         media: <GameDevelopment />,
         actionUrl: "gamedevelopment"
     },
     {
-        bgColor: "#FE7562",
         title: "Weekly Scratch and Python Classes",
         media: <ScratchAndPythonClasses />,
         actionUrl: "weeklyscratchandpythonclasses"
     },
     {
-        bgColor: "#262525",
         title: "Nanshan Huitong Admission Receptions",
         media: <Nanshan />,
         actionUrl: "nanshanhuitongadmissionreceptions"
     },
     {
-        bgColor: "#262525",
         title: "Squash Club and Playing",
         media: <SquashClub />,
         actionUrl: "squashclubandplaying"
     },
     {
-        bgColor: "#262525",
         title: "Academic awards",
         media: <AcademicAwards />,
         actionUrl: "academicawards"
     },
     {
-        bgColor: "#262525",
         title: "Student Council",
         media: <StudentCouncil />,
         actionUrl: "studentcouncil"
     },
     {
-        bgColor: "#262525",
         title: "Community Service - Mission Hiring Hall (http://missionhiringhall.org) ",
         media: <CommunityService />,
         actionUrl: "communityservice"
