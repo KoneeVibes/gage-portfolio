@@ -12,10 +12,10 @@ export const FooterBox = styled(Box)`
         [theme.breakpoints.down("miniTablet")]: {
             transform: "translateY(50%)",
             "& img": {
-                width: "100%"
+                width: "50%"
             }
         },
-        [theme.breakpoints.down(240)]: {
+        [theme.breakpoints.down(260)]: {
             transform: "translateY(80%)"
         },
         [theme.breakpoints.down(181)]: {

@@ -16,7 +16,7 @@ export const ProjectOverview: React.FC<
                 whiteSpace={"normal"}
                 fontFamily={"Poppins"}
                 fontWeight={700}
-                fontSize={{ mobile: 24 }}
+                fontSize={{ mobile: 18, miniTablet: 24, laptop: 35 }}
                 lineHeight={1.5}
                 sx={{
                     backgroundImage: "linear-gradient(94deg, #B16CEA -14.75%, #FF755F 53.12%)",
@@ -39,7 +39,7 @@ export const ProjectOverview: React.FC<
                 whiteSpace={"normal"}
                 fontFamily={"Montserrat"}
                 fontWeight={400}
-                fontSize={{ mobile: 22 }}
+                fontSize={{ mobile: 14, miniTablet: 22 }}
                 lineHeight={1.4}
             >
                 {body}

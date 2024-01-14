@@ -7,5 +7,8 @@ export const OverviewBox = styled(Box)(
             flex: "1 1 50%",
             height: "auto",
         },
+        [theme.breakpoints.down("laptop")]: {
+            padding: "calc(1.5 * var(--cardPadding)) 0"
+        }
     })
 )

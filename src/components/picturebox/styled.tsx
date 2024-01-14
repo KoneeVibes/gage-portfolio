@@ -8,8 +8,8 @@ export const PictureBox = styled(Box)(
                 boxShadow: "none",
                 position: "absolute",
                 left: "50%",
-                transform: "translate(-50%)",
-                top: "70%",
+                transform: "translate(-50%, 5%)",
+                top: "50%",
                 width: "50%",
                 borderRadius: "0",
                 padding: "var(--cardPadding)"
@@ -20,12 +20,16 @@ export const PictureBox = styled(Box)(
         },
         [theme.breakpoints.up("miniTablet")]: {
             margin: "calc(2 * var(--sectionMargin)) 0",
+        },
+        [theme.breakpoints.up("tablet")]: {
             "& .card": {
-                left: "auto",
-                transform: "none",
-                right: "-25%",
-                top: "30%",
+                transform: "translate(30%, -50%)",
             }
         },
+        [theme.breakpoints.down("laptop")]: {
+            "& .card": {
+                padding: "0"
+            }
+        }
     })
 )

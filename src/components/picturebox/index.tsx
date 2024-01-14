@@ -11,10 +11,10 @@ export const Picture: React.FC<{}> = () => {
                 sx={{
                     backgroundImage: `url(${gage})`,
                     backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
+                    backgroundPosition: "top",
                     backgroundSize: "cover",
-                    minHeight: { mobile: "677px" },
-                    width: { miniTablet: "70%", tablet: "50%" },
+                    minHeight: { mobile: 167, miniTablet: 350, desktop: 677 },
+                    width: { mobile: "75%", tablet: "50%" },
                     display: "block",
                     marginLeft: "auto",
                     marginRight: "auto",
@@ -30,7 +30,7 @@ export const Picture: React.FC<{}> = () => {
                                 fontFamily={"Poppins"}
                                 fontWeight={700}
                                 lineHeight={1.1}
-                                fontSize={{ mobile: "16px", miniTablet: "24px" }}
+                                fontSize={{ mobile: "8px", miniTablet: "16px", tablet: "24px" }}
                                 sx={{
                                     backgroundImage: "linear-gradient(98deg, #B16CEA 3.69%, #FF6964 29.62%, #FEA44C 56.88%)",
                                     backgroundClip: "text",
@@ -47,7 +47,7 @@ export const Picture: React.FC<{}> = () => {
                             variant="body1"
                             whiteSpace={"normal"}
                             fontFamily={"Poppins"}
-                            fontSize={12}
+                            fontSize={{mobile: 6, miniTablet: 8, tablet: 12}}
                             fontWeight={400}
                             lineHeight={1.5}
                         >

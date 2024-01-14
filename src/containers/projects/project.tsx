@@ -1,7 +1,7 @@
 import { Card, CardActions, CardHeader, Typography } from "@mui/material";
 import { ProjectType } from "../../types/app.type";
 import { ProjectBox } from "./styled";
-import { BaseButton } from "../button";
+import { BaseButton } from "../../components/button";
 import { useNavigate } from "react-router-dom";
 
 export const Project: React.FC<ProjectType> = ({ bgColor, media, title, url }) => {

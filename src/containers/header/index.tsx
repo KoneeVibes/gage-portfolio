@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material"
 import { Headshot } from "../../assets"
-import { BaseButton } from "../button"
-import { Review } from "../review"
+import { BaseButton } from "../../components/button"
+import { Review } from "../../components/review"
 import { Hero } from "./styled"
 import { theme } from "../../theme"
 

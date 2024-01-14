@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { Container } from "@mui/material";
 import { Navbar } from "../../components/navigation";
-import { Header } from "../../components/header";
-import { About } from "../../components/about";
-import { Projects } from "../../components/projects";
+import { Header } from "../../containers/header";
+import { About } from "../../containers/about";
+import { Projects } from "../../containers/projects";
 import { Picture } from "../../components/picturebox";
-import { Footer } from "../../components/footer";
+import { Footer } from "../../containers/footer";
 
 export const Home: React.FC<{}> = () => {
     const projectsRef = useRef(null);
