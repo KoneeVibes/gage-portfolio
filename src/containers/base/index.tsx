@@ -1,6 +1,7 @@
-import { Box, Container, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import { Navbar } from "../../components/navigation"
-import { Footer } from "../footer"
+import { Footer } from "../../components/footer"
+import { BaseContainer } from "./styled"
 
 export const BasePage: React.FC<{ body?: React.ReactNode }> = ({ body }) => {
     const fallback = <Box sx={{ height: 400 }}>
@@ -16,17 +17,10 @@ export const BasePage: React.FC<{ body?: React.ReactNode }> = ({ body }) => {
         </Typography>
     </Box>
     return (
-        <Container
-            sx={{
-                padding: "var(--cardPadding) var(--pagePadding)",
-                "& #footer": {
-                    transform: "none",
-                }
-            }}
-        >
+        <BaseContainer>
             <Navbar />
             {body ? body : fallback}
             <Footer />
-        </Container>
+        </BaseContainer>
     )
 }

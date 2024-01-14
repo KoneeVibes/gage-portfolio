@@ -1,11 +1,12 @@
 import { useRef } from "react";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { Navbar } from "../../components/navigation";
 import { Header } from "../../containers/header";
 import { About } from "../../containers/about";
 import { Projects } from "../../containers/projects";
-import { Picture } from "../../components/picturebox";
-import { Footer } from "../../containers/footer";
+import { Picture } from "../../containers/picturebox";
+import { Footer } from "../../components/footer";
+import bgImage from "../../assets/bgImage.svg";
 
 export const Home: React.FC<{}> = () => {
     const projectsRef = useRef(null);
@@ -16,14 +17,22 @@ export const Home: React.FC<{}> = () => {
                 padding: "var(--cardPadding) var(--pagePadding)"
             }}
         >
-            <Navbar
-                footerRef={footerRef}
-            />
-            <Header
-                projectsRef={projectsRef}
-                footerRef={footerRef}
-            />
-            <About />
+            <Box
+                sx={{
+                    backgroundImage: { laptop: `url(${bgImage})` },
+                    backgroundSize: "contain",
+                    backgroundRepeat: "repeat",
+                }}
+            >
+                <Navbar
+                    footerRef={footerRef}
+                />
+                <Header
+                    projectsRef={projectsRef}
+                    footerRef={footerRef}
+                />
+                <About />
+            </Box>
             <Projects
                 projectsRef={projectsRef}
             />

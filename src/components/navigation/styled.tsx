@@ -54,6 +54,9 @@ export const Nav: React.FC<{ children: React.ReactNode }> = styled("div")(
                     fontSize: "16px"
                 }
             },
+            "& a:hover": {
+                color: "#EF7580"
+            },
             "& .actionButton": {
                 [theme.breakpoints.down("tablet")]: {
                     display: openMenu ? "inline-flex" : "none",
@@ -64,6 +67,7 @@ export const Nav: React.FC<{ children: React.ReactNode }> = styled("div")(
                 }
             },
             "& .logo": {
+                cursor: "pointer",
                 [theme.breakpoints.down(150)]: {
                     display: "none",
                 },

@@ -1,15 +1,17 @@
 import { Stack, Typography } from "@mui/material"
 import { Headshot } from "../../assets"
 import { BaseButton } from "../../components/button"
-import { Review } from "../../components/review"
+import { Review } from "../review"
 import { Hero } from "./styled"
 import { theme } from "../../theme"
 
-export const Header: React.FC<{ projectsRef: React.MutableRefObject<HTMLElement | null>, footerRef: React.MutableRefObject<HTMLElement | null> }> = ({ projectsRef, footerRef }) => {
+export const Header: React.FC<{
+    projectsRef: React.MutableRefObject<HTMLElement | null>, footerRef: React.MutableRefObject<HTMLElement | null>
+}> = ({ projectsRef, footerRef }) => {
     return (
         <Hero>
             <Stack
-                flex={"1 2 50%"}
+                flex={"1 2 60%"}
                 width={"100%"}
                 overflow={"hidden"}
             >
@@ -89,7 +91,7 @@ export const Header: React.FC<{ projectsRef: React.MutableRefObject<HTMLElement 
                 </Stack>
                 <Review />
             </Stack>
-            <Headshot style={{ flex: "1 1 50%", height: "auto", maxHeight: "511px", width: "100%" }} />
+            <Headshot style={{ flex: "1 1 40%", height: "auto", maxHeight: "511px", width: "100%" }} />
         </Hero>
     )
 }

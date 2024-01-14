@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { ProjectOverview } from "../../components/overview";
+import { ProjectOverview } from "../../containers/overview";
 import { projectdetails } from "../../config";
 import { BasePage } from "../../containers/base";
 

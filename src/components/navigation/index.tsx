@@ -7,9 +7,11 @@ import { Menu } from "../button/menu";
 import { useEffect, useContext } from "react";
 import { Context } from "../../context";
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement | null> }> = ({ footerRef }) => {
-    const { openMenu, setOpenMenu } = useContext(Context)
+    const { openMenu, setOpenMenu } = useContext(Context);
+    const navigate = useNavigate();
     useEffect(() => {
         if (openMenu) {
             document.body.style.overflow = "hidden"
@@ -19,7 +21,10 @@ export const Navbar: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement |
     }, [openMenu])
     return (
         <Nav>
-            <Logo className="logo" />
+            <Logo
+                className="logo"
+                onClick={() => navigate("/")}
+            />
             <ul>
                 {navlinks.map((navlink, k) => {
                     return (
@@ -28,6 +33,7 @@ export const Navbar: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement |
                                 to={navlink.link}
                                 smooth={true}
                                 onClick={() => setOpenMenu(false)}
+                                className={navlink.name}
                             >
                                 {navlink.name}
                             </HashLink>
