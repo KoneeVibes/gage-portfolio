@@ -3,11 +3,16 @@ import { ProjectType } from "../../types/app.type";
 import { ProjectBox } from "./styled";
 import { BaseButton } from "../../components/button";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Project: React.FC<ProjectType> = ({ media, title, url }) => {
     const navigate = useNavigate();
     return (
-        <ProjectBox>
+        <ProjectBox
+            component={motion.div}
+            initial={{ opacity: 0, transform: "translate(0, 10vh)" }}
+            whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
+        >
             {media}
             <Card
                 className="card"

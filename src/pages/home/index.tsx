@@ -7,6 +7,7 @@ import { Projects } from "../../containers/projects";
 import { Picture } from "../../containers/picturebox";
 import { Footer } from "../../components/footer";
 import bgImage from "../../assets/bgImage.svg";
+import { motion } from "framer-motion";
 
 export const Home: React.FC<{}> = () => {
     const projectsRef = useRef(null);
@@ -18,10 +19,13 @@ export const Home: React.FC<{}> = () => {
             }}
         >
             <Box
+                component={motion.div}
+                whileInView={{ opacity: 1 }}
                 sx={{
                     backgroundImage: { laptop: `url(${bgImage})` },
                     backgroundSize: "contain",
                     backgroundRepeat: "repeat",
+                    opacity: 0
                 }}
             >
                 <Navbar

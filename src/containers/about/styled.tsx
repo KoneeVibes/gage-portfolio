@@ -1,6 +1,9 @@
-import { Stack, styled } from "@mui/material";
+import { Stack, StackProps, styled } from "@mui/material";
+import { MotionProps } from "framer-motion";
 
-export const AboutStack = styled(Stack)(
+type AboutStackProps = StackProps & Omit<MotionProps, keyof StackProps>;
+
+export const AboutStack: React.FC<AboutStackProps> = styled(Stack)(
     ({ theme }) => ({
         [theme.breakpoints.up("mobile")]: {
             flexDirection: "column",

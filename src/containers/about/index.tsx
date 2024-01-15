@@ -1,11 +1,17 @@
-import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material"
-import { AboutIcon } from "../../assets"
-import { AboutStack } from "./styled"
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { AboutIcon } from "../../assets";
+import { AboutStack } from "./styled";
 import header from "../../assets/headerPhoto.svg";
+import { motion } from "framer-motion";
 
 export const About: React.FC<{}> = () => {
     return (
-        <AboutStack id="about">
+        <AboutStack
+            id="about"
+            component={motion.div}
+            initial={{ opacity: 0, transform: "translate(0, 10vh)" }}
+            whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
+        >
             <Box
                 sx={{
                     flex: "1 1 50%",

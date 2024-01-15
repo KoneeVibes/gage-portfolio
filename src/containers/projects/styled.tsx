@@ -1,6 +1,13 @@
-import { Box, Container, styled } from "@mui/material";
+import { Box, BoxProps, Container, ContainerProps, styled } from "@mui/material";
+import { MotionProps } from "framer-motion";
 
-export const ProjectsContainer = styled(Container)(
+type ProjectContainerProps = {
+    children?: React.ReactNode;
+} & Omit<MotionProps, keyof ContainerProps> & ContainerProps;
+
+type ProjectBoxProps = BoxProps & Omit<MotionProps, keyof BoxProps>;
+
+export const ProjectsContainer: React.FC<ProjectContainerProps> = styled(Container)(
     ({ theme }) => ({
         margin: "var(--sectionMargin) 0",
         padding: 0,
@@ -13,7 +20,7 @@ export const ProjectsContainer = styled(Container)(
     })
 )
 
-export const ProjectBox = styled(Box)(
+export const ProjectBox: React.FC<ProjectBoxProps> = styled(Box)(
     ({ theme }) => ({
         padding: theme.spacing(6),
         display: "flex",

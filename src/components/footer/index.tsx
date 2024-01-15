@@ -3,13 +3,16 @@ import { Box, Stack, Typography } from "@mui/material";
 import { SMIcons } from "../../config";
 import { FooterBox } from "./styled";
 import logo from "../../assets/logo.svg";
+import { motion } from "framer-motion";
 
 export const Footer: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement | null> }> = ({ footerRef }) => {
     return (
         <FooterBox
             id="footer"
             ref={footerRef}
-            component={"div"}
+            component={motion.div}
+            initial={{ opacity: 0, transform: "translate(0, 10vh)" }}
+            whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
         >
             <img src={logo} alt="logo" loading="lazy" />
             <Box

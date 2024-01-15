@@ -2,12 +2,16 @@ import { Stack, Typography } from "@mui/material";
 import { ProjectsContainer } from "./styled";
 import { projects } from "../../config";
 import { Project } from "./project";
+import { motion } from "framer-motion";
 
 export const Projects: React.FC<{ projectsRef: React.RefObject<HTMLDivElement> }> = ({ projectsRef }) => {
     return (
         <ProjectsContainer
             id="projects"
             ref={projectsRef}
+            component={motion.div}
+            initial={{ opacity: 0, transform: "translate(0, 10vh)" }}
+            whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
         >
             <Typography
                 variant="h2"

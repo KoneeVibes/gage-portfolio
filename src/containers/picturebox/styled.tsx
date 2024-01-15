@@ -1,6 +1,9 @@
-import { Box, styled } from "@mui/material";
+import { Box, BoxProps, styled } from "@mui/material";
+import { MotionProps } from "framer-motion";
 
-export const PictureBox = styled(Box)(
+type PictureBoxProps = BoxProps & Omit<MotionProps, keyof BoxProps>
+
+export const PictureBox: React.FC<PictureBoxProps> = styled(Box)(
     ({ theme }) => ({
         [theme.breakpoints.up("mobile")]: {
             margin: "var(--sectionMargin) 0",

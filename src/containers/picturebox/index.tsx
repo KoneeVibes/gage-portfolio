@@ -3,10 +3,15 @@ import { PictureBox } from "./styled";
 import { SMIcons } from "../../config";
 import React from "react";
 import gage from "../../assets/gagePhoto.svg";
+import { motion } from "framer-motion";
 
 export const Picture: React.FC<{}> = () => {
     return (
-        <PictureBox>
+        <PictureBox
+            component={motion.div}
+            initial={{ opacity: 0, transform: "translate(0, 10vh)" }}
+            whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
+        >
             <Box
                 sx={{
                     backgroundImage: `url(${gage})`,

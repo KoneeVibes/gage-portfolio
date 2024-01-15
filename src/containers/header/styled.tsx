@@ -1,6 +1,11 @@
-import { Stack, styled } from "@mui/material";
+import { Stack, StackProps, styled } from "@mui/material";
+import { MotionProps } from "framer-motion";
 
-export const Hero: React.FC<{ children: React.ReactNode }> = styled(Stack)(
+type HeroProps = {
+    children: React.ReactNode
+} & StackProps & Omit<MotionProps, keyof StackProps>
+
+export const Hero: React.FC<HeroProps> = styled(Stack)(
     ({ theme }) => ({
         [theme.breakpoints.up("mobile")]: {
             flexDirection: "column",

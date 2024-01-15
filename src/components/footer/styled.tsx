@@ -1,7 +1,9 @@
-import { styled } from "@mui/material";
-import { Box } from "@mui/system";
+import { styled, Box, BoxProps } from "@mui/material";
+import { MotionProps } from "framer-motion";
 
-export const FooterBox = styled(Box)`
+type FooterProps = BoxProps & Omit<MotionProps, keyof BoxProps>
+
+export const FooterBox: React.FC<FooterProps> = styled(Box)`
     ${({ theme }) => ({
         padding: "var(--cardPadding) 0",
         "& img": {
@@ -10,16 +12,16 @@ export const FooterBox = styled(Box)`
             marginRight: "auto",
         },
         [theme.breakpoints.down("miniTablet")]: {
-            transform: "translateY(50%)",
+            transform: "translateY(50%) !important",
             "& img": {
                 width: "50%"
             }
         },
         [theme.breakpoints.down(260)]: {
-            transform: "translateY(80%)"
+            transform: "translateY(80%) !important"
         },
         [theme.breakpoints.down(181)]: {
-            transform: "translateY(100%)"
+            transform: "translateY(100%) !important"
         },
     })}
 `

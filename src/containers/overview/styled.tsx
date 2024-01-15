@@ -29,6 +29,26 @@ export const OverviewBox = styled(Box)(
             flex: "1 1 50%",
             height: "auto",
         },
+        "& ul": {
+            listStyleType: "none",
+            paddingInlineStart: 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: theme.spacing(2),
+        },
+        "& a": {
+            fontFamily: "Poppins",
+            fontWeight: 500,
+            fontSize: "20px",
+            lineHeight: 1.4,
+            color: "#000000",
+            textDecoration: "underline",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            [theme.breakpoints.down("laptop")]: {
+                fontSize: "16px"
+            }
+        },
         [theme.breakpoints.down("laptop")]: {
             padding: "calc(1.5 * var(--cardPadding)) 0"
         },

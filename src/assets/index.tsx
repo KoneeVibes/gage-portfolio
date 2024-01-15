@@ -7,7 +7,6 @@ export { ReactComponent as GameDevelopment } from "./gamedevelopment.svg";
 export { ReactComponent as ScratchAndPythonClasses } from "./scratchandclasses.svg";
 export { ReactComponent as Nanshan } from "./nanshan.svg";
 export { ReactComponent as SquashClub } from "./squash.svg";
-export { ReactComponent as AcademicAwards } from "./academic.svg";
 export { ReactComponent as StudentCouncil } from "./studentcouncil.svg";
 export { ReactComponent as CommunityService } from "./communityservice.svg";
 export { ReactComponent as GagePhoto } from "./gagePhoto.svg";

@@ -27,6 +27,7 @@ export const Overview: React.FC<{}> = () => {
                     media2={projectDetail.media2}
                     media3={projectDetail.media3}
                     body={projectDetail.body}
+                    links={projectDetail.links}
                 />
             }
         />

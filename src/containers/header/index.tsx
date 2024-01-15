@@ -1,15 +1,20 @@
-import { Stack, Typography } from "@mui/material"
-import { Headshot } from "../../assets"
-import { BaseButton } from "../../components/button"
-import { Review } from "../review"
-import { Hero } from "./styled"
-import { theme } from "../../theme"
+import { Stack, Typography } from "@mui/material";
+import { Headshot } from "../../assets";
+import { BaseButton } from "../../components/button";
+import { Review } from "../review";
+import { Hero } from "./styled";
+import { theme } from "../../theme";
+import { motion } from "framer-motion";
 
 export const Header: React.FC<{
     projectsRef: React.MutableRefObject<HTMLElement | null>, footerRef: React.MutableRefObject<HTMLElement | null>
 }> = ({ projectsRef, footerRef }) => {
     return (
-        <Hero>
+        <Hero
+            component={motion.div}
+            initial={{ opacity: 0, transform: "translate(0, 10vh)" }}
+            whileInView={{ opacity: 1, transform: "translate(0, 0)" }}
+        >
             <Stack
                 flex={"1 2 60%"}
                 width={"100%"}
@@ -38,9 +43,9 @@ export const Header: React.FC<{
                             color: "transparent"
                         }}
                     >
-                        Hello, I’m Gage Hakim,
+                        I am a 9th grade
                     </Typography>
-                    <br /> I am a 14 year old high school student from China.
+                    <br /> American student in China.
                 </Typography>
                 <Stack
                     spacing={2}

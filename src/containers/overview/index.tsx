@@ -1,5 +1,6 @@
-import { Box, Stack, Typography } from "@mui/material"
-import { OverviewBox } from "./styled"
+import { Box, Stack, Typography } from "@mui/material";
+import { OverviewBox } from "./styled";
+import { Link } from "react-router-dom";
 
 export const ProjectOverview: React.FC<
     {
@@ -7,9 +8,10 @@ export const ProjectOverview: React.FC<
         media1: React.ReactNode,
         media2?: React.ReactNode,
         media3?: React.ReactNode,
-        body: string
+        body: string,
+        links?: { text: string, href: string }[]
     }
-> = ({ title, media1, media2, media3, body }) => {
+> = ({ title, media1, media2, media3, body, links }) => {
     return (
         <OverviewBox>
             <Typography
@@ -48,6 +50,19 @@ export const ProjectOverview: React.FC<
             >
                 {body}
             </Typography>
+            <ul>
+                {links?.map((link, k) => {
+                    return (
+                        <Link
+                            key={k}
+                            to={link.href}
+                            target="_blank"
+                        >
+                            {link.text}
+                        </Link>
+                    )
+                })}
+            </ul>
         </OverviewBox>
     )
 }
