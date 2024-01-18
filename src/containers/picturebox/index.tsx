@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardHeader, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardHeader, IconButton, Stack, Typography } from "@mui/material";
 import { PictureBox } from "./styled";
 import { SMIcons } from "../../config";
 import React from "react";
@@ -66,10 +66,10 @@ export const Picture: React.FC<{}> = () => {
                                 justifyContent={"center"}
                                 gap={".5rem"}
                             >
-                                {SMIcons.map((icon, index) => (
-                                    <React.Fragment key={index}>
-                                        {icon}
-                                    </React.Fragment>
+                                {SMIcons.map((item, index) => (
+                                    <IconButton key={index} onClick={() => window.open(item.url, '_blank')}>
+                                        {item.icon}
+                                    </IconButton>
                                 ))}
                             </Stack>
                         </Box>

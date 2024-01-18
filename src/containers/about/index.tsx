@@ -3,6 +3,8 @@ import { AboutIcon } from "../../assets";
 import { AboutStack } from "./styled";
 import header from "../../assets/headerPhoto.svg";
 import { motion } from "framer-motion";
+import { aboutLinks } from "../../config";
+import { Link } from "react-router-dom";
 
 export const About: React.FC<{}> = () => {
     return (
@@ -17,7 +19,7 @@ export const About: React.FC<{}> = () => {
                     flex: "1 1 50%",
                     backgroundImage: `url(${header})`,
                     backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
+                    backgroundPosition: "top",
                     backgroundSize: "cover",
                     borderRadius: "67px",
                     minHeight: { mobile: "732px", laptop: "auto" }
@@ -72,6 +74,20 @@ export const About: React.FC<{}> = () => {
                     >
                         Along the way, I moved from YKPAO school in Shanghai to Nanshan Whittle School in Shenzhen and that led me to find new interests outside of coding. I have spent the last two years more focused on acting, teaching, student government, squash, business and exploring new scientific areas than I have coding. It’s been wonderful. I still have a great interest in computer science and have been doing a project related to my two passions that ties AI into molecular dynamics but I have found there is so much more out there that enjoy diving into.
                     </Typography>
+                    <ul>
+                        {aboutLinks.map((item, k) => {
+                            return (
+                                <li key={k}>
+                                    <Link
+                                        to={item.url}
+                                        target="_blank"
+                                    >
+                                        {item.title}
+                                    </Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </CardContent>
             </Card>
         </AboutStack>

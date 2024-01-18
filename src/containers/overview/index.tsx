@@ -8,10 +8,11 @@ export const ProjectOverview: React.FC<
         media1: React.ReactNode,
         media2?: React.ReactNode,
         media3?: React.ReactNode,
+        media4?: React.ReactNode,
         body: string,
         links?: { text: string, href: string }[]
     }
-> = ({ title, media1, media2, media3, body, links }) => {
+> = ({ title, media1, media2, media3, media4, body, links }) => {
     return (
         <OverviewBox>
             <Typography
@@ -41,6 +42,21 @@ export const ProjectOverview: React.FC<
                     {media3}
                 </Stack>
             </Box>
+            {media4 ?
+                <Box
+                    className="mediaBox"
+                    component={"div"}
+                >
+                    <Stack
+                        direction={"row"}
+                        className="media"
+                    >
+                        {media4}
+                    </Stack>
+                </Box>
+                :
+                null
+            }
             <Typography
                 whiteSpace={"normal"}
                 fontFamily={"Montserrat"}
@@ -53,13 +69,14 @@ export const ProjectOverview: React.FC<
             <ul>
                 {links?.map((link, k) => {
                     return (
-                        <Link
-                            key={k}
-                            to={link.href}
-                            target="_blank"
-                        >
-                            {link.text}
-                        </Link>
+                        <li key={k}>
+                            <Link
+                                to={link.href}
+                                target="_blank"
+                            >
+                                {link.text}
+                            </Link>
+                        </li>
                     )
                 })}
             </ul>

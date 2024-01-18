@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import { SMIcons } from "../../config";
 import { FooterBox } from "./styled";
 import logo from "../../assets/logo.svg";
@@ -23,10 +23,10 @@ export const Footer: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement |
                     justifyContent={"center"}
                     gap={".5rem"}
                 >
-                    {SMIcons.map((icon, index) => (
-                        <React.Fragment key={index}>
-                            {icon}
-                        </React.Fragment>
+                    {SMIcons.map((item, index) => (
+                        <IconButton key={index} onClick={() => window.open(item.url, '_blank')}>
+                            {item.icon}
+                        </IconButton>
                     ))}
                 </Stack>
                 <hr style={{ margin: "var(--cardPadding) 0", border: "1px solid #FF7660" }} />

@@ -1,4 +1,4 @@
-import { CommunityService, FacebookIcon, GameDev1, GameDev2, GameDevelopment, HuitonAdmission, InstagramIcon, LinkedInIcon, Nanshan, ScratchAndPython1, ScratchAndPython2, ScratchAndPython3, ScratchAndPythonClasses, Squash1, Squash2, SquashClub, StudentCouncil, StudentCouncil1, TwitterIcon, YTIcon } from "../assets"
+import { Awards, CommunityService, GameDev1, GameDev2, GameDevelopment, GmailIcon, HuitonAdmission, Nanshan, ScratchAndPython1, ScratchAndPython2, ScratchAndPython3, ScratchAndPythonClasses, Squash1, Squash2, SquashClub, StudentCouncil, StudentCouncil1, WeChatIcon, YTIcon, ZoomIcon, CommunityService1, Awards1, Awards4, } from "../assets";
 
 export const navlinks = [
     {
@@ -42,14 +42,34 @@ export const projects = [
         actionUrl: "studentcouncil"
     },
     {
-        title: "Community Service - Mission Hiring Hall (http://missionhiringhall.org) ",
+        title: "Community Service ",
         media: <CommunityService />,
         actionUrl: "communityservice"
+    },
+    {
+        title: "Awards",
+        media: <Awards />,
+        actionUrl: "awards"
     },
 ]
 
 export const SMIcons = [
-    <FacebookIcon />, <LinkedInIcon />, <TwitterIcon />, <YTIcon />, <InstagramIcon />
+    {
+        icon: < ZoomIcon />,
+        url: "https://meeting.tencent.com/user-center/shared-record-info?id=65d6638f-7e89-48db-8953-c6e2ae04fb07&from=3"
+    },
+    {
+        icon: <WeChatIcon />,
+        url: "gageidhakim"
+    },
+    {
+        icon: <GmailIcon />,
+        url: "mailto:gage@gagehakim.com"
+    },
+    {
+        icon: <YTIcon />,
+        url: "https://www.youtube.com/@GageHakim"
+    },
 ]
 
 export const projectdetails = [
@@ -73,7 +93,7 @@ export const projectdetails = [
             },
             {
                 text: "07-07-2021 - Another Article about the Apple WWDC Scholarship (English Translation)",
-                href: "https://luxurious-spinach-b3f.notion.site/Gage-Hakim-s-Portfolio-209e7d0197804e5ab551c70350b17fd8"
+                href: "https://drive.google.com/file/d/1ca3SgKHBcKKUZTRoT6F2B68xf2dUYzo5/view?usp=drive_link"
             }
         ]
     },
@@ -85,27 +105,39 @@ export const projectdetails = [
         body: "I am a teacher’s assistant for AP Economics at Huitong school and on the weekend I teach weekly free scratch and python classes to lower schoolers. Here are some recordings from some of this years classes. If you would like to enroll or you are a parent that would like to enroll your children for the winter 2024 term, feel free to email me.",
         links: [
             {
-                text: "Fall 2023 Scratch Classes 2023-10-15 2023-09-24 ",
-                href: "https://meeting.tencent.com/user-center/shared-record-info?id=65d6638f-7e89-48db-8953-c6e2ae04fb07&from=3"
+                text: "Fall 2023 Scratch Classes 2023-10-15",
+                href: "https://meeting.tencent.com/v2/cloud-record/share?id=65d6638f-7e89-48db-8953-c6e2ae04fb07&from=3"
             },
             {
-                text: "Spring 2023 Scratch Classes 2023-04-16 2023-01-29 ",
+                text: "Fall 2023 Scratch Classes 2023-09-24 ",
                 href: "https://meeting.tencent.com/v2/cloud-record/share?id=c830bd82-a24e-4adb-874d-6f69fab3bc55&from=3&is-single=true"
             },
             {
+                text: "Spring 2023 Scratch Classes 2023-04-16",
+                href: "https://meeting.tencent.com/v2/cloud-record/share?id=2a8f9eb4-bfcb-4d94-858d-5188aea95cff&from=3&is-single=true"
+            },
+            {
+                text: "Spring 2023 Scratch Classes 2023-01-29",
+                href: "https://meeting.tencent.com/v2/cloud-record/share?id=04b9f39d-4cfc-429c-b9d3-74e950bba6e7&from=3"
+            },
+            {
                 text: "Winter 2024 Python Class 2024-01-06",
-                href: "https://meeting.tencent.com/user-center/shared-record-info?id=2a8f9eb4-bfcb-4d94-858d-5188aea95cff&from=3&is-single=true"
+                href: "https://meeting.tencent.com/user-center/shared-record-info?id=953f474c-4328-4421-9910-4b449662a986&from=3"
             }
         ]
     },
     {
         title: "Nanshan Huitong Admission Receptions",
         media1: <HuitonAdmission />,
-        body: "I really have gotten a lot out of Huitong School and have been joining the principal, Jim Hawkins, to present my school experience to the parents of potential students. Jim Hawkins is very impressive brining in his experience of seven years leading Harrow boarding school in the UK and he is really moving the school forward. The advisors and teachers are great if you like learning. If you are interested in attending Huitong, you can hear about my experience here:",
+        body: "I really have gotten a lot out of Huitong School and have been joining the principal, Jim Hawkins, to present my school experience to the parents of potential students. Jim Hawkins is very impressive bringing in his experience of seven years leading Harrow boarding school in the UK and he is really moving the school forward. The advisors and teachers are great if you like learning. If you are interested in attending Huitong, you can hear about my experience here:",
         links: [
             {
-                text: "English Chinese",
-                href: "https://www.youtube.com/watch?v=Sob05dH25Cg&feature=youtu.be"
+                text: "English",
+                href: "https://youtu.be/Sob05dH25Cg"
+            },
+            {
+                text: "Chinese",
+                href: "https://www.youtube.com/watch?v=YYIlDarP8Ao&feature=youtu.be&ab_channel=GageHakim"
             },
             {
                 text: "Presentation Slides",
@@ -129,5 +161,27 @@ export const projectdetails = [
         title: "Student Council",
         media1: <StudentCouncil1 />,
         body: "I feel lucky to have gotten a position with the student council. I am on the events organizing committee and am enjoying it. I get to interact with a lot of great people from all the high school grades. I am really enjoying and look forward to continuing throughout my high school years."
+    },
+    {
+        title: "Community Service",
+        media1: <CommunityService1 />,
+        body: `Last August, I did a one-month internship at Mission Hiring Hall in San Francisco. It was a whole new experience for me helping people better their lives. I followed Michelle and Omar around and was their assistant. I went to meetings at government buildings and helped at job fairs. Probably my biggest contribution was to help automate some of their internal processes. I hope that when I go back next summer, I can add more value to this great organization. Go to [Mission Hiring Hall](http://missionhiringhall.org) to learn more.`
+    },
+    {
+        title: "Awards",
+        media1: <Awards1 />,
+        media4: <Awards4 />,
+        body: "I have won a few awards outside of computer related competitions. Here are some of them."
+    },
+]
+
+export const aboutLinks = [
+    {
+        title: "11-28-2023 - General Article by Huitong School (Chinese)",
+        url: "https://mp.weixin.qq.com/s/Ei1wCG5EctX0dUMg7yWzLg",
+    },
+    {
+        title: "11-23-2022 - About Me by Huitong School (Chinese)",
+        url: "https://mp.weixin.qq.com/s/h9IR3hk_4IluD14r3Tn6tA",
     },
 ]

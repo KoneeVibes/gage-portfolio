@@ -5,6 +5,26 @@ type AboutStackProps = StackProps & Omit<MotionProps, keyof StackProps>;
 
 export const AboutStack: React.FC<AboutStackProps> = styled(Stack)(
     ({ theme }) => ({
+        "& ul": {
+            listStyleType: "none",
+            paddingInlineStart: 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: theme.spacing(2),
+        },
+        "& a": {
+            fontFamily: "Poppins",
+            fontWeight: 500,
+            fontSize: "20px",
+            lineHeight: 1.4,
+            color: "#000000",
+            textDecoration: "underline",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            [theme.breakpoints.down("laptop")]: {
+                fontSize: "16px"
+            }
+        },
         [theme.breakpoints.up("mobile")]: {
             flexDirection: "column",
             gap: theme.spacing(3),
