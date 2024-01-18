@@ -18,7 +18,10 @@ export const FooterBox: React.FC<FooterProps> = styled(Box)`
             }
         },
         [theme.breakpoints.down(293)]: {
-            transform: "translateY(50%) !important"
+            transform: "translateY(55%) !important",
+            "& .iconButton": {
+                width: "15%",
+            },
         },
         [theme.breakpoints.down(240)]: {
             transform: "translateY(75%) !important"

@@ -38,14 +38,11 @@ export const OverviewBox = styled(Box)(
         },
         "& a": {
             fontFamily: "Poppins",
-            fontWeight: 500,
-            fontSize: "20px",
+            fontWeight: 400,
+            fontSize: "15px",
             lineHeight: 1.4,
             color: "#000000",
             textDecoration: "underline",
-            [theme.breakpoints.down("laptop")]: {
-                fontSize: "16px"
-            }
         },
         "& li": {
             overflow: "hidden",

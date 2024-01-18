@@ -105,25 +105,40 @@ export const projectdetails = [
         body: "I am a teacher’s assistant for AP Economics at Huitong school and on the weekend I teach weekly free scratch and python classes to lower schoolers. Here are some recordings from some of this years classes. If you would like to enroll or you are a parent that would like to enroll your children for the winter 2024 term, feel free to email me.",
         links: [
             {
-                text: "Fall 2023 Scratch Classes 2023-10-15",
-                href: "https://meeting.tencent.com/v2/cloud-record/share?id=65d6638f-7e89-48db-8953-c6e2ae04fb07&from=3"
+                sectionTitle: "Fall 2023 Scratch Classes",
+                sections: [
+                    {
+                        date: "2023-10-15",
+                        href: "https://meeting.tencent.com/v2/cloud-record/share?id=65d6638f-7e89-48db-8953-c6e2ae04fb07&from=3"
+                    },
+                    {
+                        date: "2023-09-24",
+                        href: "https://meeting.tencent.com/v2/cloud-record/share?id=c830bd82-a24e-4adb-874d-6f69fab3bc55&from=3&is-single=true"
+                    },
+                ],
             },
             {
-                text: "Fall 2023 Scratch Classes 2023-09-24 ",
-                href: "https://meeting.tencent.com/v2/cloud-record/share?id=c830bd82-a24e-4adb-874d-6f69fab3bc55&from=3&is-single=true"
+                sectionTitle: "Spring 2023 Scratch Classes",
+                sections: [
+                    {
+                        date: "2023-04-16",
+                        href: "https://meeting.tencent.com/v2/cloud-record/share?id=2a8f9eb4-bfcb-4d94-858d-5188aea95cff&from=3&is-single=true"
+                    },
+                    {
+                        date: "2023-01-29",
+                        href: "https://meeting.tencent.com/v2/cloud-record/share?id=04b9f39d-4cfc-429c-b9d3-74e950bba6e7&from=3"
+                    },
+                ],
             },
             {
-                text: "Spring 2023 Scratch Classes 2023-04-16",
-                href: "https://meeting.tencent.com/v2/cloud-record/share?id=2a8f9eb4-bfcb-4d94-858d-5188aea95cff&from=3&is-single=true"
+                sectionTitle: "Winter 2024 Python Class",
+                sections: [
+                    {
+                        date: "2024-01-06",
+                        href: "https://meeting.tencent.com/user-center/shared-record-info?id=953f474c-4328-4421-9910-4b449662a986&from=3"
+                    },
+                ],
             },
-            {
-                text: "Spring 2023 Scratch Classes 2023-01-29",
-                href: "https://meeting.tencent.com/v2/cloud-record/share?id=04b9f39d-4cfc-429c-b9d3-74e950bba6e7&from=3"
-            },
-            {
-                text: "Winter 2024 Python Class 2024-01-06",
-                href: "https://meeting.tencent.com/user-center/shared-record-info?id=953f474c-4328-4421-9910-4b449662a986&from=3"
-            }
         ]
     },
     {

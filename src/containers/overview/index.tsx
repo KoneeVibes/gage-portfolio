@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { OverviewBox } from "./styled";
 import { Link } from "react-router-dom";
@@ -10,7 +11,7 @@ export const ProjectOverview: React.FC<
         media3?: React.ReactNode,
         media4?: React.ReactNode,
         body: string,
-        links?: { text: string, href: string }[]
+        links?: Record<any, any>[]
     }
 > = ({ title, media1, media2, media3, media4, body, links }) => {
     return (
@@ -67,19 +68,44 @@ export const ProjectOverview: React.FC<
                 {body}
             </Typography>
             <ul>
-                {links?.map((link, k) => {
-                    return (
-                        <li key={k}>
-                            <Link
-                                to={link.href}
-                                target="_blank"
-                            >
-                                {link.text}
-                            </Link>
-                        </li>
-                    )
-                })}
-            </ul>
-        </OverviewBox>
+                {links?.map((link, k) => (
+                    link.sectionTitle ?
+                        (
+                            <React.Fragment>
+                                <Typography
+                                    fontFamily={"Poppins"}
+                                    fontWeight={500}
+                                    fontSize={{ mobile: "16px", laptop: "20px" }}
+                                    lineHeight={1.4}
+                                    color={"#000000"}
+                                    sx={{
+                                        textDecoration: "underline"
+                                    }}
+                                >
+                                    {link.sectionTitle}
+                                </Typography>
+                                {
+                                    link.sections.map((section: { date: string, href: string }, k: any) => {
+                                        return (
+                                            <li key={k}>
+                                                <Link to={section.href} target="_blank">
+                                                    {section.date}
+                                                </Link>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </React.Fragment>
+                        )
+                        : (
+                            <li key={k}>
+                                <Link to={link.href} target="_blank">
+                                    {link.text}
+                                </Link>
+                            </li>
+                        )
+                ))}
+            </ul >
+        </OverviewBox >
     )
 }
