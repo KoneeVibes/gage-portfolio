@@ -12,15 +12,18 @@ export const FooterBox: React.FC<FooterProps> = styled(Box)`
             marginRight: "auto",
         },
         [theme.breakpoints.down("miniTablet")]: {
-            transform: "translateY(50%) !important",
+            transform: "translateY(30%) !important",
             "& img": {
                 width: "50%"
             }
         },
-        [theme.breakpoints.down(260)]: {
-            transform: "translateY(80%) !important"
+        [theme.breakpoints.down(293)]: {
+            transform: "translateY(50%) !important"
         },
-        [theme.breakpoints.down(181)]: {
+        [theme.breakpoints.down(240)]: {
+            transform: "translateY(75%) !important"
+        },
+        [theme.breakpoints.down(164)]: {
             transform: "translateY(100%) !important"
         },
     })}

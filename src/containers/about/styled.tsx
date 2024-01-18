@@ -19,11 +19,13 @@ export const AboutStack: React.FC<AboutStackProps> = styled(Stack)(
             lineHeight: 1.4,
             color: "#000000",
             textDecoration: "underline",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
             [theme.breakpoints.down("laptop")]: {
                 fontSize: "16px"
             }
+        },
+        "& li": {
+            overflow: "hidden",
+            textOverflow: "ellipsis",
         },
         [theme.breakpoints.up("mobile")]: {
             flexDirection: "column",

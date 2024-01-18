@@ -24,7 +24,14 @@ export const Footer: React.FC<{ footerRef?: React.MutableRefObject<HTMLElement |
                     gap={".5rem"}
                 >
                     {SMIcons.map((item, index) => (
-                        <IconButton key={index} onClick={() => window.open(item.url, '_blank')}>
+                        <IconButton
+                            key={index}
+                            onClick={() => window.open(item.url, '_blank')}
+                            sx={{
+                                padding: { mobile: 0, tablet: ".5rem" },
+                                width: { mobile: "15%", tablet: "unset" }
+                            }}
+                        >
                             {item.icon}
                         </IconButton>
                     ))}

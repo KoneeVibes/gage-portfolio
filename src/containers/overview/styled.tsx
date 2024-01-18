@@ -43,11 +43,13 @@ export const OverviewBox = styled(Box)(
             lineHeight: 1.4,
             color: "#000000",
             textDecoration: "underline",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
             [theme.breakpoints.down("laptop")]: {
                 fontSize: "16px"
             }
+        },
+        "& li": {
+            overflow: "hidden",
+            textOverflow: "ellipsis",
         },
         [theme.breakpoints.down("laptop")]: {
             padding: "calc(1.5 * var(--cardPadding)) 0"

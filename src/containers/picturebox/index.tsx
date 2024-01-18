@@ -52,7 +52,7 @@ export const Picture: React.FC<{}> = () => {
                             variant="body1"
                             whiteSpace={"normal"}
                             fontFamily={"Poppins"}
-                            fontSize={{mobile: 6, miniTablet: 8, tablet: 12}}
+                            fontSize={{ mobile: 6, miniTablet: 8, tablet: 12 }}
                             fontWeight={400}
                             lineHeight={1.5}
                         >
@@ -60,14 +60,22 @@ export const Picture: React.FC<{}> = () => {
                             <br />I am a 14 year old high school student from China
                         </Typography>
                         <Box>
-                            <hr style={{ margin: "var(--cardPadding) 0", border: "1px solid #FF7660" }} />
+                            <hr />
                             <Stack
                                 direction={"row"}
                                 justifyContent={"center"}
+                                flexWrap={{ mobile: "wrap", tablet: "unset" }}
                                 gap={".5rem"}
                             >
                                 {SMIcons.map((item, index) => (
-                                    <IconButton key={index} onClick={() => window.open(item.url, '_blank')}>
+                                    <IconButton
+                                        key={index}
+                                        onClick={() => window.open(item.url, '_blank')}
+                                        sx={{
+                                            padding: 0,
+                                            width: {mobile: "15%", tablet: "unset"}
+                                        }}
+                                    >
                                         {item.icon}
                                     </IconButton>
                                 ))}

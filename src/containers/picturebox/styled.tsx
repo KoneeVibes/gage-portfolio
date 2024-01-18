@@ -16,23 +16,30 @@ export const PictureBox: React.FC<PictureBoxProps> = styled(Box)(
                 width: "50%",
                 borderRadius: "0",
                 padding: "var(--cardPadding)"
-            }
+            },
+            "& hr": {
+                margin: "var(--cardPadding) 0",
+                border: "1px solid #FF7660",
+            },
         },
         [theme.breakpoints.up(150)]: {
             margin: "calc(1.5 * var(--sectionMargin)) 0",
         },
         [theme.breakpoints.up("miniTablet")]: {
             margin: "calc(2 * var(--sectionMargin)) 0",
+            // "& hr": {
+            //     margin: "0.5rem 0",
+            // }
         },
         [theme.breakpoints.up("tablet")]: {
             "& .card": {
                 transform: "translate(30%, -50%)",
-            }
+            },
         },
         [theme.breakpoints.down("laptop")]: {
             "& .card": {
                 padding: "0"
             }
-        }
+        },
     })
 )
