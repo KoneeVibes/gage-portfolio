@@ -56,8 +56,8 @@ export const Picture: React.FC<{}> = () => {
                             fontWeight={400}
                             lineHeight={1.5}
                         >
-                            Hello, I’m Gage Hakim, and
-                            <br />I am a 14 year old high school student from China
+                            Hello, I’m Gage Hakim,
+                            <br />I am a 9th grade American student in China.
                         </Typography>
                         <Box>
                             <hr />
