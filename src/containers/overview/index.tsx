@@ -99,7 +99,7 @@ export const ProjectOverview: React.FC<
                         )
                         : (
                             <li key={k}>
-                                <Link to={link.href} target="_blank">
+                                <Link to={link.href} target="_blank" download={link.download}>
                                     {link.text}
                                 </Link>
                             </li>

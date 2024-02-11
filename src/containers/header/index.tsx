@@ -1,7 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import { Headshot } from "../../assets";
 import { BaseButton } from "../../components/button";
-import { Review } from "../review";
 import { Hero } from "./styled";
 import { theme } from "../../theme";
 import { motion } from "framer-motion";
@@ -94,7 +93,6 @@ export const Header: React.FC<{
                         </Typography>
                     </BaseButton>
                 </Stack>
-                <Review />
             </Stack>
             <Headshot style={{ flex: "1 1 40%", height: "auto", maxHeight: "511px", width: "100%" }} />
         </Hero>

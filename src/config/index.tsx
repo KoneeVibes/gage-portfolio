@@ -84,8 +84,18 @@ export const projectdetails = [
                 href: "https://zhuanlan.zhihu.com/p/444653348"
             },
             {
+                text: "12-13-2021 - Roblox Award Article by Roblox (English)",
+                href: "/../files/Roblox article by Roblox English.pdf",
+                download: true,
+            },
+            {
                 text: "11-08-2021 - Apple WWDC Scholarship and Roblox Award Article by NY Times (Chinese) ",
                 href: "https://mp.weixin.qq.com/s/wcc_kPvnF7Ku6BUXvAgVqg"
+            },
+            {
+                text: "11-08-2021 - Apple WWDC Scholarship and Roblox Award Article by NY Times (English) ",
+                href: "/../files/Apple_WWDC_Scholarship_and_Roblox_Award_Article_by_NY_Times_English.docx",
+                download: true,
             },
             {
                 text: "07-07-2021 - Another Article about the Apple WWDC Scholarship (Chinese)",
@@ -94,7 +104,7 @@ export const projectdetails = [
             {
                 text: "07-07-2021 - Another Article about the Apple WWDC Scholarship (English Translation)",
                 href: "https://drive.google.com/file/d/1ca3SgKHBcKKUZTRoT6F2B68xf2dUYzo5/view?usp=drive_link"
-            }
+            },
         ]
     },
     {
